@@ -1,0 +1,132 @@
+ErrorDocument 403 /page73682869.html
+ErrorDocument 404 /page73682869.html
+
+DirectoryIndex page72927699.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://relei\.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =https
+RewriteCond %{HTTP_HOST} ^www\.relei.ru [NC]
+RewriteRule ^(.*)$ https://relei\.ru/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^gift$ page72643903.html [NC]
+RewriteRule ^gift/$ page72643903.html [NC]
+
+RewriteRule ^gift/netflix$ page72710591.html [NC]
+RewriteRule ^gift/netflix/$ page72710591.html [NC]
+
+RewriteRule ^transfers$ page73237475.html [NC]
+RewriteRule ^transfers/$ page73237475.html [NC]
+
+RewriteRule ^services$ page73308897.html [NC]
+RewriteRule ^services/$ page73308897.html [NC]
+
+RewriteRule ^info/faq$ page73381325.html [NC]
+RewriteRule ^info/faq/$ page73381325.html [NC]
+
+RewriteRule ^info/rates$ page73409755.html [NC]
+RewriteRule ^info/rates/$ page73409755.html [NC]
+
+RewriteRule ^info/contacts$ page73471531.html [NC]
+RewriteRule ^info/contacts/$ page73471531.html [NC]
+
+RewriteRule ^info/reviews$ page73547885.html [NC]
+RewriteRule ^info/reviews/$ page73547885.html [NC]
+
+RewriteRule ^info/payment-methods$ page73568369.html [NC]
+RewriteRule ^info/payment-methods/$ page73568369.html [NC]
+
+RewriteRule ^info/refund$ page73597735.html [NC]
+RewriteRule ^info/refund/$ page73597735.html [NC]
+
+RewriteRule ^pay/canva$ page73599581.html [NC]
+RewriteRule ^pay/canva/$ page73599581.html [NC]
+
+RewriteRule ^pay/openai$ page73642237.html [NC]
+RewriteRule ^pay/openai/$ page73642237.html [NC]
+
+RewriteRule ^pay/udemy$ page73643727.html [NC]
+RewriteRule ^pay/udemy/$ page73643727.html [NC]
+
+RewriteRule ^pay/ps$ page73644289.html [NC]
+RewriteRule ^pay/ps/$ page73644289.html [NC]
+
+RewriteRule ^pay/notion$ page73645547.html [NC]
+RewriteRule ^pay/notion/$ page73645547.html [NC]
+
+RewriteRule ^pay/spotify$ page73648391.html [NC]
+RewriteRule ^pay/spotify/$ page73648391.html [NC]
+
+RewriteRule ^pay/ebay$ page73649477.html [NC]
+RewriteRule ^pay/ebay/$ page73649477.html [NC]
+
+RewriteRule ^pay/tradeinn$ page73649915.html [NC]
+RewriteRule ^pay/tradeinn/$ page73649915.html [NC]
+
+RewriteRule ^pay/amazon$ page73656181.html [NC]
+RewriteRule ^pay/amazon/$ page73656181.html [NC]
+
+RewriteRule ^pay/booking$ page73656727.html [NC]
+RewriteRule ^pay/booking/$ page73656727.html [NC]
+
+RewriteRule ^pay/airbnb$ page73657447.html [NC]
+RewriteRule ^pay/airbnb/$ page73657447.html [NC]
+
+RewriteRule ^pay/cults$ page73658141.html [NC]
+RewriteRule ^pay/cults/$ page73658141.html [NC]
+
+RewriteRule ^pay/etsy$ page73708655.html [NC]
+RewriteRule ^pay/etsy/$ page73708655.html [NC]
+
+RewriteRule ^gift/amazon$ page73739599.html [NC]
+RewriteRule ^gift/amazon/$ page73739599.html [NC]
+
+RewriteRule ^gift/visa$ page73765571.html [NC]
+RewriteRule ^gift/visa/$ page73765571.html [NC]
+
+RewriteRule ^gift/amex$ page73768509.html [NC]
+RewriteRule ^gift/amex/$ page73768509.html [NC]
+
+RewriteRule ^gift/google$ page73769107.html [NC]
+RewriteRule ^gift/google/$ page73769107.html [NC]
+
+RewriteRule ^gift/paysafecard$ page73769981.html [NC]
+RewriteRule ^gift/paysafecard/$ page73769981.html [NC]
+
+RewriteRule ^gift/apple$ page73770385.html [NC]
+RewriteRule ^gift/apple/$ page73770385.html [NC]
+
+RewriteRule ^gift/airbnb$ page73771451.html [NC]
+RewriteRule ^gift/airbnb/$ page73771451.html [NC]
+
+RewriteRule ^gift/nintendo$ page73771881.html [NC]
+RewriteRule ^gift/nintendo/$ page73771881.html [NC]
+
+RewriteRule ^gift/xbox$ page73772259.html [NC]
+RewriteRule ^gift/xbox/$ page73772259.html [NC]
+
+RewriteRule ^gift/ps$ page73772789.html [NC]
+RewriteRule ^gift/ps/$ page73772789.html [NC]
+
+RewriteRule ^gift/ea$ page73773319.html [NC]
+RewriteRule ^gift/ea/$ page73773319.html [NC]
+
+RewriteRule ^gift/spotify$ page73778635.html [NC]
+RewriteRule ^gift/spotify/$ page73778635.html [NC]
+
+RewriteRule ^gift/mint$ page73778897.html [NC]
+RewriteRule ^gift/mint/$ page73778897.html [NC]
+
+RewriteRule ^gift/twitch$ page73780693.html [NC]
+RewriteRule ^gift/twitch/$ page73780693.html [NC]
+
+RewriteRule ^gift/minecraft$ page73781087.html [NC]
+RewriteRule ^gift/minecraft/$ page73781087.html [NC]
+
+

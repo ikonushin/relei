@@ -1,0 +1,234 @@
+.hover-border {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.hover-border::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000; /* Цвет рамки */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.hover-border:hover::before {
+  transform: scaleX(1);
+}
+
+
+.atvImg {
+  display: inline-block;
+  width: 320px;
+  height: 200px;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+}
+
+.atvImg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transition: all 0.2s ease-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.atvImg-container.over .atvImg-shadow {
+  box-shadow: 0 45px 100px rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+}
+
+.atvImg-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+}
+
+.atvImg-rendered-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  transition: all 0.1s ease-out;
+}
+
+.atvImg-shadow {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  box-shadow: 0 8px 30px rgba(14, 21, 47, 0.6);
+  transition: all 0.2s ease-out;
+}
+
+.atvImg-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 60%);
+  pointer-events: none;
+}
+
+
+.giftcard-wrapper {
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+.price-button {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 30rem;
+  cursor: pointer;
+}
+
+.price-button:hover {
+  border-color: #38B6FF;
+  color: #dddddd;
+}
+
+.price-button.active {
+  border-color: #38B6FF;
+  background-color: transparent; /* лёгкий подсвет */
+  color: transparent;
+}
+
+/* Кнопка подтверждения */
+.confirm-button {
+  width: 100%;
+  max-width: 150px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: transparent;
+  color: #000000;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  border-radius: 30rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.confirm-button[enabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.menu {
+  position: fixed; /* или absolute, если фиксировать не нужно */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 112px; /* 56px + отступы */
+  z-index: 999;
+}
+
+/* Общий стиль ссылок */
+.animated-link {
+  position: absolute;
+  height: 56px;
+  line-height: 56px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.container {
+  position: relative;
+}
+
+/* Индивидуальные координаты */
+.link-1 {
+  left: 290px;
+  top: 56px;
+}
+
+.link-2 {
+  left: 510px;
+  top: 56px;
+}
+
+.link-3 {
+  left: 736px;
+  top: 56px;
+}
+
+/* Анимация подчеркивания */
+.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #38b6ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Активация при наведении */
+.animated-link:hover::after {
+  animation: underline-grow-fade 2s ease forwards;
+}
+
+/* Ключевые кадры */
+@keyframes underline-grow-fade {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+ .hover-text {
+    color: #E0E0E0; /* начальный цвет */
+    transition: color 0.1s ease;
+    cursor: pointer;
+  }
+
+  .hover-text:hover {
+    color: #38B6FF; /* цвет при наведении */
+  }
+
